@@ -1,0 +1,38 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	"1": {
+		"prefix": "p",
+		"body": "print($1);"
+	},
+	"2": {
+		"prefix": "func",
+		"body": "def ${1:name}(${2:*args,**kwargs}):\n\t${3:pass}"
+	},
+	"3": {
+		"prefix": "clzz",
+		"body": "class ${1:clzz}:\n\t${2:pass}"
+	},
+	"4": {
+		"prefix": "clzzz",
+		"body": "class ${1:name}(${2:extends}):\n\t${3:pass}"
+	},
+	"evn3": {
+		"prefix": "evn3",
+		"body": "#!/usr/bin/python3"
+	},
+	"enco": {
+		"prefix": "enco",
+		"body": "# coding=utf-8"
+	},
+	"decorate-": {
+		"prefix": "de-",
+		"body": "def ${1:name}(func):\n\tdef wrapper(*args,**kwargs):\n\t\t${2:before}\n\t\tfunc()\n\t\t${3:after}\n\treturn wrapper;"
+	},
+	"decorate+": {
+		"prefix": "de+",
+		"body": "def ${1:name}(${2:s}):\n\tdef ${3:name}(func):\n\t\tdef wrapper(*args,**kwargs):\n\t\t\t${4:# before}\n\t\t\tfunc(*args,**kwargs)\n\t\t\t${5:# after}\n\t\treturn wrapper;\n\treturn $3;"
+	},
+}
